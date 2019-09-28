@@ -1,14 +1,10 @@
 body {
   box-sizing: border-box;
 }
-.vertical-label {
-  -ms-writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-}
 table {
   border-collapse: collapse;
 }
+
 td {
   padding: 10px;
   background: white;
@@ -22,26 +18,42 @@ td {
   background-color: #66CCFF;
   border: none;
 }
-.horizontal-header.first-row {
+
+.double-header thead tr:first-child .horizontal-header{
   height: 30px;
   top: 0;
 }
-.horizontal-header.second-row {
+
+.double-header thead tr:nth-child(2) .horizontal-header{
   top: 30px;
-}
-.vertical-header {
-  position: sticky;
-  left: 0;
-  z-index: 2;
-  background-color: #FF6699;
 }
 
 .vertical-header {
   position: sticky;
-  left: 0;
   z-index: 2;
   background-color: #FF6699;
 }
+
+.single-header .vertical-header {
+  left: 0;
+}
+
+.double-header tbody tr:first-child .vertical-header:first-child{
+  left: 0;
+}
+
+.vertical-header-label{
+  width: 30px;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.double-header tbody tr:not(:first-child) .vertical-header,
+.double-header tbody tr:first-child .vertical-header:nth-child(2){
+  left: 30px;
+}
+
 
 .wrapper {
   width: 500px;
