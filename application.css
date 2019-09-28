@@ -1,0 +1,50 @@
+body {
+  box-sizing: border-box;
+}
+.vertical-label {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  padding: 10px;
+  background: white;
+  border: solid 1px black;
+}
+
+.horizontal-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #66CCFF;
+  border: none;
+}
+.horizontal-header.first-row {
+  height: 30px;
+  top: 0;
+}
+.horizontal-header.second-row {
+  top: 30px;
+}
+.vertical-header {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #FF6699;
+}
+
+.vertical-header {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #FF6699;
+}
+
+.wrapper {
+  width: 500px;
+  height: 500px;
+  overflow: scroll;
+}
